@@ -6,6 +6,10 @@ Utility function for getting which type of triangle can be formed based on three
 
 Developed and tested on Node v6.2.2
 
+## Installation
+
+- `npm install`
+
 ## Try it out with Node
 
 - `node example.js -a=[sideA] -b=[sideB] -c=[sideC]`
