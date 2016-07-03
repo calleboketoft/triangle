@@ -1,6 +1,6 @@
 declare module 'triangle' {
 
-  export {typeOfTriangle, validation}
+  export {typeOfTriangle, validation, errors}
 
   function typeOfTriangle (
     sideA: number,
@@ -19,5 +19,10 @@ declare module 'triangle' {
       sideC: number
     ): any;
     static validTriangleSide(numberArg: number): any;
+  }
+
+  class errors {
+    static numsFitForTriangle: string
+    static triangleInequality: string
   }
 }

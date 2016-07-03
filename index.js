@@ -1,6 +1,12 @@
 'use strict'
+
+// export the validation functions and errors to be available to, for example,
+// client validation logics
 let validation = require('./validation')
 module.exports.validation = validation
+module.exports.errors = require('./errors')
+
+// main function of the lib
 module.exports.typeOfTriangle = function typeOfTriangle (sideA, sideB, sideC) {
   let inputResult = validation.validateArgs(...arguments)
   if (inputResult instanceof Error) {
