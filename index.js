@@ -1,8 +1,8 @@
 'use strict'
-let validateArgs = require('./validate-input').validateArgs
-
-module.exports = function typeOfTriangle (sideA, sideB, sideC) {
-  let inputResult = validateArgs(...arguments)
+let validation = require('./validation')
+module.exports.validation = validation
+module.exports.typeOfTriangle = function typeOfTriangle (sideA, sideB, sideC) {
+  let inputResult = validation.validateArgs(...arguments)
   if (inputResult instanceof Error) {
     throw inputResult
   } else {

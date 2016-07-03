@@ -1,6 +1,6 @@
 'use strict'
 var tap = require('tap')
-var typeOfTriangle = require('../index')
+var typeOfTriangle = require('../index').typeOfTriangle
 var errors = require('../errors')
 
 // Error handling
