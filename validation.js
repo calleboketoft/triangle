@@ -13,11 +13,8 @@ function validateArgs (...args) {
   // check args individually
   if (!error) {
     args.some(arg => {
-      let badArg = validTriangleSide(arg)
-      if (badArg) {
-        error = badArg
-        return true
-      }
+      error = validTriangleSide(arg)
+      return error
     })
   }
 
@@ -28,6 +25,9 @@ function validateArgs (...args) {
 
   return error
 }
+
+// Validation functions
+// returns null when passing and instance of Error when failing
 
 function threeArgs (...args) {
   return args.length !== 3 ? new Error(errors.threeArgs) : null
