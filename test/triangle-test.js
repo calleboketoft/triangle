@@ -7,6 +7,7 @@ var errors = require('../errors')
 // ##############
 
 tap.test('incorrect number of args', (tap) => {
+  tap.throws(() => typeOfTriangle(), {message: errors.threeArgs})
   tap.throws(() => typeOfTriangle(1, 2), {message: errors.threeArgs})
   tap.throws(() => typeOfTriangle(1, 2, 3, 4), {message: errors.threeArgs})
   tap.end()
